@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Our Virtual Memory Tour</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="welcome" class="welcome">
+        <h1>Welcome to our Memory Tour!</h1>
+        <p>Hi Baby!! HAPPY BIRTHDAY!!!!! <br>I made you a little something, it could be a anniversary gift but I wanted
+            to create one thing that had my favorite memories of you, or rather us heheh <br> Click 'Start' to begin...
+        </p>
+        <button onclick="nextLocation('welcome', 'location1')">Start</button>
+    </div>
+    <div id="location1" class="location" style="display: none;">
+        <h1>Location 1</h1>
+        <img src="number1.jpg" alt="Location 1">
+        <p>Description for location 1...</p>
+        <button onclick="nextLocation('location1', 'welcome')">Previous</button>
+        <button onclick="nextLocation('location1', 'location2')">Next</button>
+
+    </div>
+    <div id="location2" class="location" style="display: none;">
+        <h1>Location 2</h1>
+        <img src="location2.jpg" alt="Location 2">
+        <p>Description for location 2...</p>
+        <button onclick="nextLocation('location2', 'location1')">Previous</button>
+        <button onclick="nextLocation('location2', 'location3')">Next</button>
+    </div>
+    <div id="location3" class="location" style="display: none;">
+        <h1>Location 3</h1>
+        <img src="location3.jpg" alt="Location 3">
+        <p>Description for location 3...</p>
+        <button onclick="nextLocation('location3', 'location2')">Previous</button>
+        <button onclick="nextLocation('location3', 'card')">Next</button>
+    </div>
+    <!-- ... more locations ... -->
+
+    <div id="card" style="display: none;">
+        <h1>Message Title</h1>
+        <p>Your heartfelt message...</p>
+        <button onclick="nextLocation('card', 'location3')">Go Back to Locations</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
